@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+  {% stylesheets '../resources/css/*.css' filter='cssmin' output='assets/css/all.css' %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+  {% endstylesheets %}
+  <title>Hello World in Silex</title>
+</head>
+<body>
+  <strong>Hello world, I'm a Silex app running on cloudControl!</strong>
+  <footer>
+    Coming from the <a href="https://www.cloudcontrol.com/dev-center/Quickstart">Quickstart</a>?
+    Check out <a href="https://www.cloudcontrol.com/dev-center/Guides/PHP/Helloworld%20in%20Silex">the explanation</a>.
+  </footer>
+</body>
+</html>
