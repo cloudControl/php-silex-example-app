@@ -26,7 +26,8 @@ $app['assetic.filter_manager'] = $app->share(
 );
 
 $app->get('/', function() use ($app) {
-    return $app['twig']->render('hello.twig');
+    $domain = isset($_ENV['DOMAIN']) ? $_ENV['DOMAIN'] : 'cloudcontrolled.com';
+    return $app['twig']->render('hello.twig', array('domain' => $domain));
 });
 
 $app->run();
